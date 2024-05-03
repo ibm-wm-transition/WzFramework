@@ -7,8 +7,15 @@ services:
     volumes:
       # Our Code
       - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
-      - ../../code/is-packages/WzAssertManualTest/:${GUEST_IS_HOME}/packages/WzAssertManualTest/
       - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
+      - ../../code/is-packages/WzAssertManualTest/:${GUEST_IS_HOME}/packages/WzAssertManualTest/
+      - ../../code/is-packages/WzLog/:${GUEST_IS_HOME}/packages/WzLog/
+      - ../../code/is-packages/WzLogManualTest/:${GUEST_IS_HOME}/packages/WzLogManualTest/
+      - ../../code/is-packages/WzTestManager/:${GUEST_IS_HOME}/packages/WzTestManager/
+      - ../../code/is-packages/WzTestManagerManualTest/:${GUEST_IS_HOME}/packages/WzTestManagerManualTest/
+      - ../../code/is-packages/WzUtil/:${GUEST_IS_HOME}/packages/WzUtil/
+      - ../../code/is-packages/WzUtilLocalTest/:${GUEST_IS_HOME}/packages/WzUtilLocalTest/
+      - ../../code/is-packages/WzUtilManualTest/:${GUEST_IS_HOME}/packages/WzUtilManualTest/
       # build script
       - ../../code/posix/msr/:/mnt/msr-scripts/
     environment:

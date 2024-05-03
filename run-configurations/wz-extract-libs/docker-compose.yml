@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  wz-extract-libs:
+    # must provide an image having jcode.sh
+    image: ${CONTAINER_IMAGE}:${CONTAINER_IMAGE_TAG}
+    volumes:
+      # build script
+      - ../../code/posix/msr/:/mnt/msr-scripts/
+      # libs folder
+      - ../../code/lib/:/mnt/msr-libs/
+    environment:
+      - GUEST_IS_HOME
+    entrypoint: /mnt/msr-scripts/extractLibs.sh

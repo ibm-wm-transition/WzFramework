@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  wz-local-build:
+    # must provide an image having jcode.sh
+    image: ${CONTAINER_IMAGE}:${CONTAINER_IMAGE_TAG}
+    volumes:
+      # Our Code
+      - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
+      - ../../code/is-packages/WzAssertManualTest/:${GUEST_IS_HOME}/packages/WzAssertManualTest/
+      - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
+      # build script
+      - ../../code/posix/msr/:/mnt/msr-scripts/
+    environment:
+      - GUEST_IS_HOME
+    entrypoint: /mnt/msr-scripts/compilePackages.sh

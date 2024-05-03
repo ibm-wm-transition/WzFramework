@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  wz-dev-01:
+    image: ${CONTAINER_IMAGE}:${CONTAINER_IMAGE_TAG}
+    ports:
+      - ${HOST_PORT_PREFIX}55:5555
+    volumes:
+      - ${HOST_MSR_LICENSE_FILE}:/tmp/license.xml
+      - ./application.properties:/tmp/application.properties
+      # Our Code
+      - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
+      - ../../code/is-packages/WzAssertManualTest/:${GUEST_IS_HOME}/packages/WzAssertManualTest/
+      - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
+      - ../../code/is-packages/WzUtil/:${GUEST_IS_HOME}/packages/WzUtil/
+      - ../../code/is-packages/WzUtilManualTest/:${GUEST_IS_HOME}/packages/WzUtilManualTest/
+      - ../../code/is-packages/WzUtilLocalTest/:${GUEST_IS_HOME}/packages/WzUtilLocalTest/
+    environment:
+      - SAG_IS_LICENSE_FILE=/tmp/license.xml
+      - SAG_IS_CONFIG_PROPERTIES=/tmp/application.properties

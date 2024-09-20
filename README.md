@@ -24,3 +24,6 @@ This repository offers a collection of packages and code snippets that can be us
   - change `.env` as needed
   - issue `docker compose up`
   - open a designer and start developing
+
+-----
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.

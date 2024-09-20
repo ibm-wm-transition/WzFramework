@@ -12,7 +12,7 @@
     <value name="WzUtil">*</value>
   </record>
   <value name="listACL">Default</value>
-  <value name="description">Assertion utilities for flow language testing</value>
+  <value name="description">Manual testing for assertion utilities</value>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
   <value name="build"></value>

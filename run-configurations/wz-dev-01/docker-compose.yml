@@ -9,6 +9,7 @@ services:
       - ${HOST_MSR_LICENSE_FILE}:/tmp/license.xml
       - ./application.properties:/tmp/application.properties
       # Our Code
+      - ../../code/is-packages/WzAdvanced/:${GUEST_IS_HOME}/packages/WzAdvanced/
       - ../../code/is-packages/WzAssert/:${GUEST_IS_HOME}/packages/WzAssert/
       - ../../code/is-packages/WzAssertLocalTest/:${GUEST_IS_HOME}/packages/WzAssertLocalTest/
       - ../../code/is-packages/WzAssertManualTest/:${GUEST_IS_HOME}/packages/WzAssertManualTest/
@@ -21,4 +22,4 @@ services:
       - ../../code/is-packages/WzUtilManualTest/:${GUEST_IS_HOME}/packages/WzUtilManualTest/
     environment:
       - SAG_IS_LICENSE_FILE=/tmp/license.xml
-      - SAG_IS_CONFIG_PROPERTIES=/tmp/application.properties
+      #- SAG_IS_CONFIG_PROPERTIES=/tmp/application.properties

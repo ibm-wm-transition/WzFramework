@@ -9,5 +9,5 @@
   <null name="replication_services"/>
   <null name="requires"/>
   <value name="listACL">Default</value>
-  <value name="description">Local testing for assertion utilities</value>
+  <value name="description">Advanced utilities</value>
 </Values>

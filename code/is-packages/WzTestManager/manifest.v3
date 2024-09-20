@@ -9,5 +9,5 @@
   <null name="replication_services"/>
   <null name="requires"/>
   <value name="listACL">Default</value>
-  <value name="description">Assertion utilities for flow language testing</value>
+  <value name="description">Test management</value>
 </Values>
